@@ -1,0 +1,4 @@
+Creating Directories
+1. The command "mkdir" (make directory) followed by the name name of the new directory will create a new child directory inside the current directory
+
+>> mkdir catpics (as an example)
