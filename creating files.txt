@@ -1,0 +1,39 @@
+>> mkdir Playground
+>> cd .\Playground\
+>> echo $null >> slide.py 
+
+Note: To use the above to create a python file, you have to do the following in order to syntax error when running python files:
+1. In file, go to File > Save with Encoding > select UTF-8 
+
+Another option:
+>>New-Item -ItemType file nameOfFile.py
+
+Another option:
+Create the py file by going to new file of the directory > type nameOfFile.py (ensure the extension .py is added)
+
+Best Option:
+Creating a temporary function. It will create a temporary function (temp meaning while that instance of PowerShell is open) that allow you to type: touch nameOfFile.py
+
+>> function touch {New-Item -ItemType File -Name ($args[0])}
+>> touch nameOfFile.py
+
+To make this a "permanent" change it just needs to be added to the PowerShell profile at:
+
+1. C:\Users\USERNAMEWEHRE\Documents\WindowsPowerShell\Mircrosoft.PowerShell_profile.ps1
+
+Note that you need to alter the above path to reflect your actual username.
+
+First run:
+2. Test-Path $profile
+
+to check if a profile file already exist.
+
+If True, then navigate to the above location and copy and paste in the function line. Restart Powershell.
+
+If False, then enter the below command to create a new empty profile file: (ONLY DO IF NO IS FOUND AS THE -force FLAG WILL OVERWRITE ANY EXISTING PROFILE)
+(Optional if false) 3. New-Item -Path $Profile -Type File -force
+
+At this point navigate to the above profile location and paste in the function (this one without the double qoutes: "function touch {New-Item -ItemType File -Name ($args[0])}").
+Restart Powershell. You can now type touch to create new empty files encoded with UTF-8. 
+
+
