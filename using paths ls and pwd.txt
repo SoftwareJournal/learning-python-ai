@@ -1,0 +1,11 @@
+1. opening powershell by hitting window key > type power > click Window Powershell app
+2. Operating Systems organize their folders in a hierarchy (a tree) with parents and children, all relative to a base root directory
+
+3. The cmdlet "pwd" (print working directory) will tell you the full absolute path of where you're at!
+c:\---------Program Files
+    |
+    |
+    |--------user---something---stuff...
+
+4. The cmdlet "ls" (list) will show all the contents of that directory
+
