@@ -1,0 +1,15 @@
+Navigating Absolutely
+1. The command "cd" (change directory) followed by the absolute path of the folder will navigate you directly there 
+>> cd C:\User (as an example)
+
+Navigating Relatively
+2. The dot "." stands for current directory, and dot-dot ".." for parent directory. This allows for relative navigation:
+>> cd .. (as an example)
+
+example
+>> ls
+>> cd .\somestuff\inchild\folderdirectory
+>> cd ..\goback\to\parentdirectory
+>> clear
+
+3. The backlash "cd \" stands for going back to root directory
